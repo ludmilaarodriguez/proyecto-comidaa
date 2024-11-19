@@ -1,0 +1,114 @@
+* {font-family: Arial, Helvetica, sans-serif;}
+body {margin-top: 130px;}
+nav {
+    background-color: chartreuse;
+    padding-bottom: 20px;
+    text-align: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
+.cLimite{
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+/* CLASE 6 */
+/* PADRE - CONTENEDOR FLEX */
+.cFlex{
+    display: flex; /* ENCIENDE FLEXBOX */
+    flex-direction: row; /* Determina orientación del flexbox */
+    justify-content: space-evenly; /* Organiza horizontalmente cada item del flexbox */
+    flex-wrap: wrap; /* Permite o no el apilamiento de items */
+}
+/* HIJO - CADA CARD DE PRODUCTO (Que también cada una tiene su pequeño flexbox organizando titulo, img, etc." */
+.cFlex div { /* "Cada etiqueta div que sea hijo del contenedor flex..." - cada card*/
+    background-color: gray; /* Color de fondo */
+    border-radius: 20px; /* Borde redondeado */
+    margin: 10px; /* Borde externo */
+    padding: 20px; /* Borde interno */
+    display: flex; /* Enciendo Flexbox */
+    flex-direction: column; /* Determina orientación vertical del flexbox */
+    align-items: center; /* Organiza verticalmente cada item del flexbox */
+    transition: 0.25s ease-in-out;
+}
+
+.cFlex div:hover { 
+    background-color: orange; 
+    transition: 0.25s ease-in-out;
+    transform: scale(1.1);
+}
+/* EXCEPCIÓN en una Card */
+.cFlex div button {
+    align-self: stretch;
+    padding: 10px;
+}
+/*
+display: flex; -> Encender Flexbox
+organizar contenido dentro del contenedor flex
+    - justify-content -> eje horizontal, grupalmente (padre)
+    - align-items -> eje vertical, grupalmente (padre)
+    - align-self -> eje vertical, individual (hijo)
+    - justify-self -> eje horizontal, individual (hijo)
+flex-direction -> Establecer eje vertical u horizontal
+flex-wrap -> permitir o no apilar items
+
+trabajando detalles con margin, padding, etc
+
+TRUCOS CSS CON LOS SELECTORES
+
+1. ANIDAR SELECTORES
+    - .cFlex div -> TODOS LOS DIVS QUE SEAN HIJOS DE LA CLASE cFlex...
+    - header div a -> TODOS LOS LINKS QUE SEAN HIJOS DEL DIV QUE SEA HIJO DEL HEADER...
+
+2. MÁS DE UN SELECTOR POR BLOQUE
+    selectores separados por coma
+    - h1, h3, .titulo
+*/
+
+
+/* MEDIA QUERIES */
+
+/* Dispositivos muy grandes (pantallas panorámicas, alta resolución) */
+@media (max-width: 1200px) {
+    body{
+        background-color: rgb(21, 255, 0);
+    }
+    .cLimite{
+        max-width: 75%;
+    }
+}
+
+/* Dispositivos grandes (notebook) */
+@media (max-width: 992px) {
+    body{
+        background-color: rgb(255, 0, 187);
+    }
+    .cLimite{
+        max-width: 75%;
+    }
+}
+
+/* Dispositivos medianos - Tablet pequeña, celular grande */
+@media (max-width: 768px) {
+    body{
+        background-color: rgb(0, 234, 255);
+    }
+    .cLimite{
+        max-width: 75%;
+    }
+}
+
+/* Dispositivos pequeños - celulares, etc. */
+@media (max-width: 576px) {
+    body{
+        background-color: yellow;
+    }
+    .cLimite{
+        max-width: 100%;
+    }
+    .cFlex div {
+        width: 100%;
+    }
+}

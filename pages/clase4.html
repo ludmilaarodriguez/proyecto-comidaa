@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repaso Clase 4</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav>
+        <h1>Clase 5 - Repaso clases 1 a 4</h1>
+        <a href="../index.html">Clase 1</a>
+        <a href="./clase2.html">Clase 2</a>
+        <a href="./clase3.html">Clase 3</a>
+        <a href="./clase4.html">Clase 4</a>
+    </nav>
+    <main class="cLimite">
+
+        <h2>Clase 4</h2>
+        <p><i>CSS avanzado</i></p>
+        <ul>
+            <li><b>Box modeling</b> - Margin y Padding</li>
+            <ul>
+                <li>Diferencia Margin y Padding</li>
+                <ul>
+                    <li>Margin - Espacio en blanco del border para afuera</li>
+                    <li>Padding - Espacio en blanco entre el border y el contenido</li>
+                </ul>
+                <li>4 Formas de definirlos</li>
+                <ul>
+                    <li><b>margin: 10px</b> - Todos los lados a la vez</li>
+                    <li><b>margin: 10px 20px</b> - Eje vertical y horizontal</li>
+                    <li><b>margin: 10px 20px 30px 40px</b> - Cada lado x separado</li>
+                    <li><b>margin-top / margin-bottom / margin-left / margin-right</b> - Cada lado individualmente</li>
+                </ul>
+            </ul>
+            <li>Contenedores Límite</li>
+            <ul>
+                <li>Para qué se usa</li>
+                <li>Creación de un contenedor límite</li>
+                <ul>
+                    <li>Encerrar en un contenedor (div, main) lo que queremos que tenga contenedor límite</li>
+                    <li>A ese contenedor, ponerle una class "cLimite"</li>
+                    <li>En CSS, darle las siguientes reglas a esa clase</li>
+                    <ul>
+                        <li><b>max-width: 50%</b> - Defino ancho máximo del contenido</li>
+                        <li><b>margin: 0 auto</b> - Centrar el contenido</li>
+                    </ul>
+                </ul>
+            </ul>
+            <li>Propiedad Position</li>
+            <ul>
+                <li><b>static</b> - valor por defecto - flujo natural de HTML</li>
+                <li><b>relative</b> - modificar la posicion de mi elemento partiendo de su posicion original en el HTML</li>
+                <li><b>absolute</b> - modificar la posicion de mi elemento ignorando su posicion original en el HTML</li>
+                <li><b>fixed</b> - fijaba la posición de mi elemento y no era afectado por el scroll</li>
+                <li><b>sticky</b> - Relative + Fixed - cuando llega a x distancia, se "pega" a la pantalla</li>
+            </ul>
+            <li>Propiedad z-index</li>
+            <ul>
+                <li>z-index: (más abajo) -2, -1, 0, 1, 2 (más arriba)</li>
+                <li>Establecer el orden en objetos que se superponen</li>
+            </ul>
+        </ul>
+        <hr>
+        <h2>Desafio 4</h2>
+        <p>PARTIENDO DE LO REALIZADO PARA EL DESAFIO 3 (receta con html completo y algo de CSS)</p>
+        <ul>
+            <li>Sumar trabajo con margin y padding (mejorar el navbar, separar más los párrafos)</li>
+            <li>Aplicar contenedor límite en mi contenido (seccion principal)</li>
+            <li>Aplicar propiedad position (ej: fixed para la barra de navegación)</li>
+            <li>(Opcional) - sumar z-index para modificar algún orden en la profundidad</li>
+        </ul>
+    </main>
+    </body>
+</html>
